@@ -14,7 +14,7 @@ export const getColumns = (uuid: string): ColumnDef<ZotData>[] => {
             {getValue<ZotData['inGraph']>() ? (
               '✅'
             ) : (
-              <button onClick={() => insertZotIntoGraph(row.original, uuid)}>
+              <button onClick={() => insertZotIntoGraph(row.original, uuid)} className="ui__button text-primary-foreground">
                 Insert
               </button>
             )}
@@ -70,7 +70,7 @@ export const getColumns = (uuid: string): ColumnDef<ZotData>[] => {
       header: 'Creators',
       accessorKey: 'creators',
       cell: ({ getValue }) => (
-        <div>
+        <div className="creators-box">
           {getValue<ZotData['creators']>().map((creator, index) => (
             <div key={index}>
               {creator.firstName} {creator.lastName} ({creator.creatorType}),{' '}

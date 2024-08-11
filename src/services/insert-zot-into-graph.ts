@@ -77,5 +77,8 @@ export const insertZotIntoGraph = async (zotItem: ZotData, uuid: string) => {
   }
 
   logseq.UI.closeMsg(msgId)
-  logseq.hideMainUI()
+  logseq.provideUI({
+    key: 'popup',
+    template: '',
+  })
 }

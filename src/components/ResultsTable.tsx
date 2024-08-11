@@ -63,7 +63,7 @@ export const ResultsTable = ({ data, uuid }: TableProps) => {
     <div className="zot-table-container">
       <div style={{ position: 'relative', marginBottom: '10px' }}>
         <button
-          className="column-chooser-button"
+          className="column-chooser-button ui__button text-primary-foreground"
           onClick={() => setShowColumnChooser(!showColumnChooser)}
         >
           Choose Columns

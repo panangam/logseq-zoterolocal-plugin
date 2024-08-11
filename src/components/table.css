@@ -7,53 +7,52 @@
 
 .zot-table {
   width: 100%;
+  word-break: normal;
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--ls-primary-text-color);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--ls-primary-background-color);
 }
 
 .zot-table button {
+  background-color: var(--ls-button-background);
   font-size: 0.6rem;
-  background-color: teal;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .zot-table th,
 .zot-table td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--ls-primary-text-color);
 }
 
 .zot-table thead {
-  background-color: #f8f8f8;
+  background-color: transparent;
 }
 
 .zot-table th {
   font-weight: bold;
-  color: #333;
   text-transform: uppercase;
   font-size: 0.85em;
   letter-spacing: 0.05em;
 }
 
-.zot-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+.zot-table tbody tr:nth-child(odd) {
+  background-color: var(--ls-secondary-background-color);
 }
 
 .zot-table tbody tr:hover {
-  background-color: #f0f0f0;
-}
-
-.zot-table td {
-  color: #555;
+  background-color: var(--ls-quaternary-background-color);
 }
 
 .column-chooser {
   position: absolute;
-  background: white;
-  border: 1px solid #ccc;
+  background: var(--ls-quaternary-background-color);
+  border: 1px solid var(--ls-primary-text-color);
   padding: 10px;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -67,4 +66,12 @@
 
 .column-chooser input[type='checkbox'] {
   margin-right: 5px;
+}
+
+#logseq-zoterolocal-plugin--popup {
+  height: 100vh;  
+}
+
+.creators-box {
+  white-space: nowrap;
 }
